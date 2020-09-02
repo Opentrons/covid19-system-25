@@ -32,9 +32,10 @@ def run(protocol):
     p1000 = protocol.load_instrument(
         'p1000_single_gen2', 'right', tip_racks=tips1k)
 
+    t20 = [protocol.load_labware('opentrons_96_filtertiprack_20ul', '6')]
+    m20 = protocol.load_instrument('p20_multi_gen2', 'left', tip_racks=t20)
+
     if PK_ADD:
-        t20 = [protocol.load_labware('opentrons_96_filtertiprack_20ul', '6')]
-        m20 = protocol.load_instrument('p20_multi_gen2', 'left', tip_racks=t20)
         al_block = protocol.load_labware(
             'opentrons_96_aluminumblock_generic_pcr_strip_200ul', '2')
         pk = al_block['A1']
