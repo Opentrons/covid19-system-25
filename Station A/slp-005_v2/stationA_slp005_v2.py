@@ -58,7 +58,7 @@ def run(protocol):
 
     tip_log = {'count': {}}
     folder_path = '/data/A'
-    tip_file_path = folder_path + '/tip_log.json'
+    tip_file_path = folder_path + '/tip_log_slp005v2.json'
     if TIP_TRACK and not protocol.is_simulating():
         if os.path.isfile(tip_file_path):
             with open(tip_file_path) as json_file:
